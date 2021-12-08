@@ -13,6 +13,53 @@ h1{
     padding: 20px;
     font-size: 25px;
 }
+.button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+
+}
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 22px;
+}
+label span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 30px;
+    background: white;
+    transition: 0.25s ease-in-out;
+}
+label span:nth-child(1){
+    top: 0;
+}
+label span:nth-child(2){
+    top: 8px;
+}
+label span:nth-child(3){
+    top: 16px;
+}
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+}
+#checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+}
+#checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 8px;
+}
 nav{
     display: flex;
     justify-content: flex-end;
@@ -46,6 +93,9 @@ nav li:hover{
     font-weight: 800;
     color: white;
 }
+.responsive{
+    display: none;
+}
 .contact{
     display: flex;
     justify-content: center;
@@ -54,6 +104,9 @@ nav li:hover{
     bottom: 290px;
     font-weight: 100;
     color: white;
+}
+.contactwo{
+    display: none;
 }
 .stsequence{
     display: flex;
@@ -97,6 +150,9 @@ footer{
     background-color: lightgray;
     height: 100px;
 }
+hr{
+    display: none;
+}
 .medias img{
     width: 25vw;
     padding: 10px;
@@ -124,25 +180,140 @@ footer{
     bottom: 50px;
 }
 @media (max-width: 400px){
+    .button{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 25%;
+        height: 2.5em;
+        background-color: black;
+    }
     h1{
         display: flex;
         justify-content: center;
-        width: 100vw;
+        position: relative;
+        width: 95vw;
+        bottom: 12vh;
+    }
+    .responsive{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        bottom: 350px;
+        left: 60px;
+        font-size: 30px;
+        color: white;
+    }
+    .contact{
+        display: none;
+    }
+    .contactwo{
+        display: flex;
+        position: relative;
+        bottom: 26vh;
+        left: 12.5vh;
+        color: white;
+        font-weight: 100;
+        font-size: 21px;
     }
     nav{
         display: none;
-    } 
+    }
     .orangeimg{
         display: flex;
         justify-content: center;
         position: relative;
         width: 360%;
         right: 216%;
+        bottom: 14.8vh;
     }
     .ndtitle{
+        display: none;
+    }
+    .stsequence{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 300%;
+        right: 5px;
+        bottom: 42vh;
+    }
+    .stsequence img{
+        display: flex;
+        margin: 2vh;
+    }
+    .ndsequence{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 300%;
+        right: 5px;
+        bottom: 44vh;
+    }
+    .ndsequence img{
+        display: flex;
+        margin: 2vh;
+    }
+    .rdsequence{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 300%;
+        right: 5px;
+        bottom: 44vh;
+    }
+    .rdsequence img{
+        display: flex;
+        margin: 2vh;
+    }
+    footer{
+        background-color: white;
+    }
+    .medias{
+        position: relative;
+        left: 32%;
+        bottom: 35vh;
+    }
+    .medias img{
+        width: 200%;
+        background-color: #7FDBD4;
+    }
+    .copyright{
         display: flex;
         justify-content: center;
-        width: 150vw;
-        font-size: 25px;
+        position: relative;
+        width: 40%;
+        bottom: 30vh;
+        left: 3%;
+        font-size: 16px;
     }
+    .whomade{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 45%;
+        bottom: 30vh;
+        left: 14%;
+        font-size: 12.5px;  
+    }
+    .reference{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 45%;
+        bottom: 30vh;
+        left: 27%;
+        font-size: 12.5px;   
+    }
+    footer{
+        height: 2vh;
+    }
+    hr{
+        display: flex;
+        position: relative;
+        bottom: 30vh;
+        background-color: #7FDBD4;
+    }
+
 }
