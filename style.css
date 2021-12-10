@@ -165,12 +165,16 @@ hr{
     bottom: 25px;
     font-weight: 700;
 }
+.up{
+    display: none;
+}
 .whomade{
     display: flex;
     justify-content: flex-end;
     position: relative;
     width: 92%;
     bottom: 50px;
+
 }
 .reference{
     display: flex;
@@ -315,5 +319,18 @@ hr{
         bottom: 30vh;
         background-color: #7FDBD4;
     }
-
+    .up{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 7vh;
+        left: 70vw;
+        width: 15vw;
+        height: 5vh;
+        background-color: #333333;
+        color: #CCCCCC;
+    }
+    a{
+        text-decoration: none;
+    }
 }
